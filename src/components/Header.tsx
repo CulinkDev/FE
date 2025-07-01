@@ -12,8 +12,8 @@ export default function Header() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/images/크몽로고.png"
-                  width={160}
+                  src="/images/로고2차.png"
+                  width={180}
                   height={80}
                   alt="Culink Logo"
                   className=" "

@@ -2,10 +2,9 @@ import React from "react";
 
 export default function SearchBtn() {
   return (
-    <div>
-      
+    <div className="z-10">
       {/* 검색 버튼 */}
-      <div className="absolute top-[588px] right-[370px] w-[124px] h-[124px] bg-gradient-to-r from-[#FF7070] to-[#FF9999] rounded-[30px] flex items-center justify-center">
+      <div className="absolute top-[588px] right-[370px] w-[124px] h-[124px] bg-gradient-to-r from-[#FF7070] to-[#FF9999] rounded-[30px] flex items-center justify-center z-10">
         <svg
           width="68"
           height="68"
