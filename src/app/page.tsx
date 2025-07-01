@@ -1,103 +1,181 @@
-import Image from "next/image";
-
+import Category from "@/components/Category";
+import Hero from "@/components/Hero";
+import SearchBtn from "@/components/SearchBtn";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="w-full">
+      {/* 히어로 섹션 */}
+      <Hero />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* 검색 버튼 */}
+      <SearchBtn />
+      {/* 카테고리 섹션 */}
+      <Category />
+
+      {/* 공연장 카드 그리드 */}
+      <section className="px-[100px] pb-20">
+        <div className="grid grid-cols-3 gap-x-[124px] gap-y-[500px]">
+          {/* 공연장 카드 1 */}
+          <div className="flex flex-col gap-6">
+            <div className="w-[557px] h-[320px] bg-gray-300 rounded-[42px] relative overflow-hidden">
+              {/* 실제 이미지로 교체 필요 */}
+              <div className="w-full h-full bg-gradient-to-br from-blue-200 to-blue-400"></div>
+            </div>
+            <div className="flex justify-between items-end">
+              <div className="flex flex-col gap-1">
+                <div className="flex gap-2">
+                  <span className="px-3 py-2 bg-[#EDEDED] rounded-xl text-lg font-medium text-black">
+                    공연장
+                  </span>
+                  <span className="px-3 py-2 bg-[#EDEDED] rounded-xl text-lg font-medium text-black">
+                    다목적홀
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-black">
+                  모든 날 모든 순간
+                </h3>
+                <div className="flex items-center gap-2">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 8.33c0 5.83-7.5 10.84-7.5 10.84S2.5 14.16 2.5 8.33a7.5 7.5 0 0115 0z"
+                      fill="#000000"
+                    />
+                  </svg>
+                  <span className="text-xl font-medium text-black">서초동</span>
+                </div>
+              </div>
+              <div className="flex flex-col items-end gap-2">
+                <div className="flex items-center gap-2">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 15l-5.5-3.5L10 5l5.5 6.5L10 15z"
+                      fill="#FCDC33"
+                    />
+                  </svg>
+                  <span className="text-xl font-normal text-black">
+                    4.8 (122)
+                  </span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span className="text-2xl font-medium text-[#F04242]">
+                    70,000
+                  </span>
+                  <span className="text-2xl font-normal text-[#242526]">
+                    원/시간
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 추가 카드들 - 동일한 구조로 반복 */}
+          {Array.from({ length: 11 }, (_, i) => (
+            <div key={i} className="flex flex-col gap-6">
+              <div className="w-[557px] h-[320px] bg-gray-300 rounded-[42px] relative overflow-hidden">
+                <div className="w-full h-full bg-gradient-to-br from-purple-200 to-purple-400"></div>
+                {i % 3 === 1 && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-white text-xl font-normal">
+                      극단 포스터 또는 홍보 이미지
+                    </span>
+                  </div>
+                )}
+              </div>
+              <div className="flex justify-between items-end">
+                <div className="flex flex-col gap-1">
+                  <div className="flex gap-2">
+                    <span className="px-3 py-2 bg-[#EDEDED] rounded-xl text-lg font-medium text-black">
+                      공연장
+                    </span>
+                    <span className="px-3 py-2 bg-[#EDEDED] rounded-xl text-lg font-medium text-black">
+                      {i % 4 === 3 ? "파티룸" : "다목적홀"}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-black">
+                    모든 날 모든 순간
+                  </h3>
+                  <div className="flex items-center gap-2">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.5 8.33c0 5.83-7.5 10.84-7.5 10.84S2.5 14.16 2.5 8.33a7.5 7.5 0 0115 0z"
+                        fill="#000000"
+                      />
+                    </svg>
+                    <span className="text-xl font-medium text-black">
+                      서초동
+                    </span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-end gap-2">
+                  <div className="flex items-center gap-2">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 15l-5.5-3.5L10 5l5.5 6.5L10 15z"
+                        fill="#FCDC33"
+                      />
+                    </svg>
+                    <span className="text-xl font-normal text-black">
+                      4.8 (122)
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <span className="text-2xl font-medium text-[#F04242]">
+                      70,000
+                    </span>
+                    <span className="text-2xl font-normal text-[#242526]">
+                      원/시간
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* 플러스 버튼 */}
+      <div className="fixed bottom-8 right-8">
+        <button className="w-28 h-28 bg-[#FF7070] rounded-full flex items-center justify-center shadow-lg hover:bg-[#FF5555] transition-colors">
+          <svg
+            width="72"
+            height="72"
+            viewBox="0 0 72 72"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M36 15v42M15 36h42"
+              stroke="white"
+              strokeWidth="6"
+              strokeLinecap="round"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   );
 }
