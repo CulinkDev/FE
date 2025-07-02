@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Category() {
   return (
-    <section className=" py-20">
+    <section className=" py-20 mt-15">
       <div className="flex items-center justify-center gap-[100px]">
         <div className="flex flex-col items-center gap-6">
           <div className="w-[110px] h-[110px] bg-[#EDEDED] rounded-[40px] flex items-center justify-center">

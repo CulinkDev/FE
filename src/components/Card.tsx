@@ -25,7 +25,7 @@ export default function Card({
     <div className="flex flex-col gap-4">
       <div className="w-full h-[320px] bg-gray-300 rounded-[42px] relative overflow-hidden">
         {/* 실제 이미지로 교체될 부분 */}
-        <div className={`w-full h-full ${imageUrl}`}></div>
+        <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
       </div>
       <CardInformation
         tags={tags}

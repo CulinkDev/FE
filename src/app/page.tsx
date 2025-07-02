@@ -1,8 +1,8 @@
-
 import CardList from "@/components/CardList";
 import Category from "@/components/Category";
 import Hero from "@/components/Hero";
 import SearchBtn from "@/components/SearchBtn";
+import SearchSection from "@/components/SearchSection";
 export default function Home() {
   return (
     <div className="w-full">
@@ -10,9 +10,14 @@ export default function Home() {
       <Hero />
 
       {/* 검색 버튼 */}
-      <SearchBtn />
+      <div className="flex items-center gap-6 mt-8 absolute top-[558px]  right-1/8 z-10">
+        <SearchSection />
+        <SearchBtn />
+      </div>
       {/* 카테고리 섹션 */}
-      <Category />
+      <data className="mt-16">
+        <Category />
+      </data>
 
       {/* 공연장 카드 그리드 */}
       <CardList />

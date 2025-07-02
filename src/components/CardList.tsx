@@ -4,7 +4,7 @@ import Card from "./Card";
 // 카드 데이터 예시
 const cardData = [
   {
-    imageUrl: "bg-gradient-to-br from-blue-200 to-blue-400",
+    imageUrl: "/images/예시이미지1.png",
     tags: ["공연장", "다목적홀"],
     title: "모든 날 모든 순간",
     location: "서초동",
@@ -13,7 +13,7 @@ const cardData = [
     price: 70000,
   },
   {
-    imageUrl: "bg-gradient-to-br from-purple-200 to-purple-400",
+    imageUrl: "/images/예시이미지2.png",
     tags: ["연습실", "밴드"],
     title: "열정의 무대",
     location: "홍대",
@@ -22,7 +22,7 @@ const cardData = [
     price: 50000,
   },
   {
-    imageUrl: "bg-gradient-to-br from-green-200 to-green-400",
+    imageUrl: "/images/예시이미지3.png",
     tags: ["스튜디오", "촬영"],
     title: "빛과 그림자",
     location: "강남",
@@ -30,6 +30,43 @@ const cardData = [
     reviewCount: 88,
     price: 90000,
   },
+    {
+    imageUrl: "/images/예시이미지3.png",
+    tags: ["스튜디오", "촬영"],
+    title: "빛과 그림자",
+    location: "강남",
+    rating: 4.7,
+    reviewCount: 88,
+    price: 90000,
+  },
+    {
+    imageUrl: "/images/예시이미지4.png",
+    tags: ["스튜디오", "촬영"],
+    title: "빛과 그림자",
+    location: "강남",
+    rating: 4.7,
+    reviewCount: 88,
+    price: 90000,
+  },
+    {
+    imageUrl: "/images/예시이미지2.png",
+    tags: ["스튜디오", "촬영"],
+    title: "빛과 그림자",
+    location: "강남",
+    rating: 4.7,
+    reviewCount: 88,
+    price: 90000,
+  },
+    {
+    imageUrl: "/images/예시이미지1.png",
+    tags: ["스튜디오", "촬영"],
+    title: "빛과 그림자",
+    location: "강남",
+    rating: 4.7,
+    reviewCount: 88,
+    price: 90000,
+  },
+
   // ... 더 많은 카드 데이터
 ];
 
