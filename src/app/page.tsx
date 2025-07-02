@@ -6,18 +6,20 @@ import SearchSection from "@/components/SearchSection";
 export default function Home() {
   return (
     <div className="w-full">
-      {/* 히어로 섹션 */}
-      <Hero />
-
-      {/* 검색 버튼 */}
-      <div className="flex items-center gap-6 mt-8 absolute top-[558px]  right-1/8 z-10">
-        <SearchSection />
-        <SearchBtn />
+      {/* 히어로 섹션과 검색 섹션을 묶는 컨테이너 */}
+      <div className="relative">
+        <Hero />
+        {/* 검색 섹션: 히어로 하단 중앙에 위치 */}
+        <div className="absolute bottom-0 left-1/2 z-10 flex w-full max-w-max -translate-x-1/2 translate-y-1/2 items-center gap-6">
+          <SearchSection />
+          <SearchBtn />
+        </div>
       </div>
-      {/* 카테고리 섹션 */}
-      <data className="mt-16">
+
+      {/* 카테고리 섹션: 검색창 아래에 충분한 공간을 주기 위해 mt-32 추가 */}
+      <div className="mt-32">
         <Category />
-      </data>
+      </div>
 
       {/* 공연장 카드 그리드 */}
       <CardList />

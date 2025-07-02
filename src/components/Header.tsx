@@ -12,7 +12,7 @@ export default function Header() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/images/로고2차.png"
+                  src="/images/example-logo.png"
                   width={180}
                   height={80}
                   alt="Culink Logo"
@@ -55,7 +55,7 @@ export default function Header() {
             {/* 채팅 버튼 */}
             <button className="w-5 h-5 flex items-center justify-center">
               <Image
-                src="/images/채팅이모티콘.svg"
+                src="/images/chat-icon.svg"
                 alt="채팅이모티콘"
                 height={20}
                 width={20}

@@ -47,7 +47,7 @@ export default function CardInformation({
       <div className="flex justify-between items-center w-full">
         <div className="flex items-center gap-2">
           <Image
-            src="/images/위치이모티콘.svg"
+            src="/images/location-icon.svg"
             alt="위치 아이콘"
             width={20}
             height={20}
