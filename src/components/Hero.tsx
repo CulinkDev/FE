@@ -34,7 +34,7 @@ export default function Hero() {
             className="object-cover"
             priority
           />
-          <p className="absolute bottom-10 right-1/2 transform -translate-x-96 -translate-y-20 text-white text-3xl font-bold">
+          <p className="absolute bottom-10 right-1/2 transform -translate-x-11/12 -translate-y-20 text-white text-3xl font-bold">
             포항 양덕 알터즈 공연장 &nbsp; <br />
             12월 22일 OPEN 특가 이벤트 진행중
           </p>
